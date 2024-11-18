@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-restaurant-website-deployment
+spec:
+  replicas: 2  # Number of pods
+  selector:
+    matchLabels:
+      app: food-restaurant-website
+  template:
+    metadata:
+      labels:
+        app: food-restaurant-website
+    spec:
+      containers:
+      - name: food-restaurant-website
+        image: food-restaurant-website:latest  # Your Docker image name
+        imagePullPolicy: Never  # Prevent image pulling from external registry
+        ports:
+        - containerPort: 80

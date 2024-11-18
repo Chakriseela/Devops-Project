@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+    - name: Build Docker image
+      command: docker build -t food-restaurant-website .
+    
+    - name: Push Docker image (optional if using Docker registry)
+      command: docker push food-restaurant-website:latest
+    
+    - name: Apply Kubernetes Deployment
+      command: kubectl apply -f deployment.yaml
+    
+    - name: Apply Kubernetes Service
+      command: kubectl apply -f service.yaml
