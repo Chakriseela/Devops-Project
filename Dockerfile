@@ -2,6 +2,7 @@
 # COPY . /usr/share/nginx/html
 
 
+
 # Use the latest NGINX image as the base
 FROM nginx:latest
 
