@@ -6,5 +6,5 @@
 FROM nginx:latest
 
 # Copy the website files to the default NGINX directory
-COPY ./Food_Restaurant_website.html /usr/share/nginx/html/index.html
-COPY ./Food_Restaurant_website.css /usr/share/nginx/html/website.css
+COPY ./Food_Restaurant_website.html /usr/share/nginx/html/Food_Restaurant_website.html
+COPY ./Food_Restaurant_website.css /usr/share/nginx/html/Food_Restaurant_website.css
