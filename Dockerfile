@@ -1,4 +1,4 @@
-FROM nginx:lates
+FROM nginx:
 COPY . /usr/share/nginx/html
 
 
